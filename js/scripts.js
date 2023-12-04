@@ -6,19 +6,21 @@ genera.addEventListener('click',function() {
     const nameInput = document.getElementById('namesurname');
     console.log('nameInput.value',nameInput.value,typeof nameInput.value);
 
+    document.getElementById('user').innerHTML = nameInput.value;
+
     const kmInput = parseInt(document.getElementById('distance').value);
     console.log('kmInput',kmInput,typeof kmInput)
 
     const bornInput = parseInt(document.getElementById('born').value)
     console.log('bornInput',bornInput,typeof bornInput)
 
-    let priceKm = ('0.21')
+    let priceKm = '0.21'
 
     let price = (priceKm * kmInput)
     console.log('price',price,typeof price)
 
     let age
-    let currentTime = ('2023')
+    let currentTime = '2023'
     age = (currentTime - bornInput)
     console.log('age',age,typeof age)
 
@@ -40,14 +42,14 @@ genera.addEventListener('click',function() {
         price = (price * 158.94)
         console.log('yen',price,typeof price)
     }
-    else if(nation === 'americian'){
+    else if(nation === 'american'){
 
         moneta = ('$')
         price = (price * 1.08)
         console.log('$',price,typeof price)
     }
 
-    const pricePrint = price.toFixed(2) + moneta;
+    const pricePrint = price.toFixed(2) + ' ' + moneta;
     document.getElementById('final-Price').innerHTML = pricePrint;
-    
+
 });
