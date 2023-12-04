@@ -42,7 +42,7 @@ genera.addEventListener('click',function() {
         price = (price * 158.94)
         console.log('yen',price,typeof price)
     }
-    else if(nation === 'american'){
+    else if(nation === 'americian'){
 
         moneta = ('$')
         price = (price * 1.08)
